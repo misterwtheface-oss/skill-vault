@@ -9,7 +9,9 @@ its folder into that machine's `~/.claude/skills/` (user level) or `<project>/.c
 there instead, see `user-context-harness/references/skill-vault.md`. Each skill is self-contained: scripts locate their
 own assets relative to `SKILL.md`, so the folder can be moved as a unit.
 
-- `user-context-harness/` — first-week setup for Claude Code: installs the tools Claude needs (no-admin routes for work laptops), then house rules and a project map (built 2026-10-31, toolchain-first refactor 2026-11-02)
+- `user-context-harness/` — first-week setup for Claude Code: installs the tools Claude needs (no-admin routes for work laptops), then house rules and a project map (built 2026-10-31, toolchain-first refactor 2026-11-02). Also published standalone at https://github.com/misterwtheface-oss/user-context-harness (this folder is the source;
+  publish with `git subtree push --prefix=user-context-harness https://github.com/misterwtheface-oss/user-context-harness.git main`
+  from inside `skill_vault/` after committing here)
 
 ## Install from this repo (another machine)
 
