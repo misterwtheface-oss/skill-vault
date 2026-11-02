@@ -1,9 +1,13 @@
 # skill_vault
 
-Skills built here for use on other machines. Nothing in this folder is loaded by Claude Code locally and nothing is
-registered with tools/ctx. To install one elsewhere, copy its folder into that machine's `~/.claude/skills/` (user level)
-or `<project>/.claude/skills/` (project level). Each skill is self-contained: scripts locate their own assets relative to
-`SKILL.md`, so the folder can be moved as a unit.
+Skills built here for use on other machines, and the local skill vault. Nothing in this folder is installed in Claude
+Code's skill folders, so no skill here costs tokens at session start. Locally, `tools/ctx` routes them: on each prompt the
+ctx hook scores the prompt against each skill's `keywords:` frontmatter and surfaces only the skills that clear the
+threshold, as a pointer to their `SKILL.md` (`python tools/ctx/ctx.py skills` lists them). The pattern is for anyone with
+many skills: at work, with around 150, it keeps the startup list short. To install one elsewhere as a normal skill, copy
+its folder into that machine's `~/.claude/skills/` (user level) or `<project>/.claude/skills/` (project level); to vault it
+there instead, see `user-context-harness/references/skill-vault.md`. Each skill is self-contained: scripts locate their
+own assets relative to `SKILL.md`, so the folder can be moved as a unit.
 
 - `user-context-harness/` — first-week setup for Claude Code: installs the tools Claude needs (no-admin routes for work laptops), then house rules and a project map (built 2026-10-31, toolchain-first refactor 2026-11-02)
 
