@@ -5,7 +5,7 @@ registered with tools/ctx. To install one elsewhere, copy its folder into that m
 or `<project>/.claude/skills/` (project level). Each skill is self-contained: scripts locate their own assets relative to
 `SKILL.md`, so the folder can be moved as a unit.
 
-- `user-context-harness/` — onboarding home base for people new to Claude Code and to folder trees (built 2026-10-31)
+- `user-context-harness/` — first-week setup for Claude Code: installs the tools Claude needs (no-admin routes for work laptops), then house rules and a project map (built 2026-10-31, toolchain-first refactor 2026-11-02)
 
 ## Install from this repo (another machine)
 
